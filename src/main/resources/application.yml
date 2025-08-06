@@ -1,0 +1,18 @@
+server:
+  port: 8081  # Change as needed
+
+spring:
+  application:
+    name: auth-service
+
+# JWT Configuration
+jwt:
+  secret: Z#4v8@RmP!1e^x*Lg2$sK!9wTb&EyQ3uMz^7dH@cNpA6fBj+UrXzV
+  expiration: 3600000  # in milliseconds (1 hour)
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
