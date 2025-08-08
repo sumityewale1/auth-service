@@ -1,5 +1,5 @@
 server:
-  port: 8081  # Change as needed
+  port: 8083  # Change as needed
 
 spring:
   application:
@@ -13,6 +13,9 @@ jwt:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
+logging:
+  level:
+    org.springframework.security: DEBUG
