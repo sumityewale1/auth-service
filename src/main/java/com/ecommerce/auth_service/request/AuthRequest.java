@@ -1,4 +1,4 @@
-package com.ecommerce.auth_service.jwt.dto.request;
+package com.ecommerce.auth_service.request;
 
 import lombok.Data;
 import lombok.Getter;

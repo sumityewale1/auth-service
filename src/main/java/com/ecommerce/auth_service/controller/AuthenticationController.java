@@ -1,6 +1,6 @@
-package com.ecommerce.auth_service.jwt.controller;
+package com.ecommerce.auth_service.controller;
 
-import com.ecommerce.auth_service.jwt.dto.request.AuthRequest;
+import com.ecommerce.auth_service.request.AuthRequest;
 import com.ecommerce.auth_service.jwt.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +34,7 @@ public class AuthenticationController {
         // If authentication is successful, load user details
         UserDetails userDetails = userDetailsService.loadUserByUsername(authRequest.getUsername());
         // If authentication is successful, load user details
-        final String jwt = JWTUtil.generateToken(userDetails);
+        final String jwt = jwtUtil.generateToken(userDetails);
         return ResponseEntity.ok(jwt);
     }
 }
