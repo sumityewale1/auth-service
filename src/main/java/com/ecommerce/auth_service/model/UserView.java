@@ -20,6 +20,7 @@ public class UserView {
     private String state;
     private String country;
     private String zipCode;
+    private String password;
     private Role role;
 
     // Note: No password field here!

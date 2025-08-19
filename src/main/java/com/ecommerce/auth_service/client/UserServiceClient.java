@@ -19,9 +19,10 @@ public class UserServiceClient {
 
     public UserView getUserByEmail(String email) {
         String url = userServiceBaseUrl + "/users/findByEmail?email={email}";
-
+        System.out.println(url);
         try {
             ResponseEntity<UserView> response = restTemplate.getForEntity(url, UserView.class, email);
+            System.out.println(response);
             if (response.getStatusCode().is2xxSuccessful()) {
                 return response.getBody();
             } else {
