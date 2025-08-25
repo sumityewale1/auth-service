@@ -19,7 +19,7 @@ import io.jsonwebtoken.*;
 public class JWTUtil {
 
     // Secret key used for signing the JWT (must be at least 256 bits for HS256)
-    private static final String SECRET_KEY = "my-super-secret-key-123456789012345";
+    private static final String SECRET_KEY = "Z#4v8@RmP!1e^x*Lg2$sK!9wTb&EyQ3uMz^7dH@cNpA6fBj+UrXzV";
 
     // Convert the secret string into a cryptographic key
     private static final SecretKey key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
